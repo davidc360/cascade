@@ -1,4 +1,4 @@
-@media (min-width: 1000px) {
+/*@media (min-width: 1000px) {*/
   #navigator-toolbox {
     display: flex;
     flex-wrap: wrap;
@@ -7,12 +7,12 @@
 
   #nav-bar {
     order: var(--uc-urlbar-position);
-    width: var(--uc-urlbar-min-width);
+    /* width: var(--uc-urlbar-min-width); */
   }
 
   #nav-bar #urlbar-container {
     min-width: 0px !important;
-    width: auto !important;
+    width: 0px !important;
   }
 
   #TabsToolbar {
@@ -25,4 +25,4 @@
   #navigator-toolbox:focus-within #titlebar {
     width: calc(100vw - var(--uc-urlbar-max-width) - 1px);
   }
-}
+/*}*/

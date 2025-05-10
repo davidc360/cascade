@@ -71,8 +71,9 @@
    *  If enabled the max-width is applied on focus
    *  otherwise the URL Bar will always be it's min-width
    */
-  --uc-urlbar-min-width: 35vw;
-  --uc-urlbar-max-width: 35vw;
+  /* --uc-urlbar-min-width: 35vw; */
+  /* --uc-urlbar-max-width: 70vw; */
+  --uc-urlbar-max-width: 400px;
 
   /*  Position of the URL Bar
    *  possible values:
@@ -89,13 +90,15 @@
 }
 
 /* Disable the Navigation Buttons */
+/*
 #back-button,
 #forward-button {
   display: none !important;
 }
+*/
 
 /* Disables the Tracking Protection Shield */
-/* #tracking-protection-icon-container { display: none !important; } */
+ #tracking-protection-icon-container { display: none !important; }
 
 /* Encryption and Permissions icons */
 /* Only hides permission items */
@@ -103,14 +106,16 @@
   display: none !important;
 }
 /* Hides extension page box */
+/*
 #identity-box.extensionPage {
   display: none !important;
 }
+*/
 /* Hides encryption AND permission items */
-/* #identity-box { display: none !important } */
+#identity-box { display: none !important }
 
 /* Hide everything BUT the zoom indicator within the URL Bar */
-/* #page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; } */
+#page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; }
 
 /* Hide the »Go«-arrow in the URL Bar */
 #urlbar-go-button {
@@ -118,7 +123,17 @@
 }
 
 /* Hides the Extensions Menu Icon */
-/* #unified-extensions-button { display: none !important; } */
+/*
+#unified-extensions-button { display: none !important; }
+*/
+#unified-extensions-button,
+#unified-extensions-button * {
+    width: 0 !important;
+}
+
+#urlbar-container, #search-container {
+    margin-inline: 0 !important;
+}
 
 /*---+---+---+---+---+---+---+
  | T | A | B | — | B | A | R |
@@ -143,7 +158,7 @@
    *  show: -moz-inline-block
    *  hide: none
    */
-  --show-tab-close-button-hover: none;
+  --show-tab-close-button-hover: -moz-inline-block;
 
   /*  Hide the all Tabs button from the Tab Bar
    *  possible values:
